@@ -1,0 +1,62 @@
+@keyframes shake-vertical {
+  0%,100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  10%,30%,50%,70% {
+    -webkit-transform: translateY(-4px);
+            transform: translateY(-4px);
+  }
+  20%,40%,60% {
+    -webkit-transform: translateY(12px);
+            transform: translateY(12px);
+  }
+  80%, 90% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+.shake-vertical {
+  -webkit-animation: shake-vertical 4s 2s infinite ease-in-out;
+	        animation: shake-vertical 4s 2s infinite ease-in-out;
+}
+
+
+@keyframes fade_in{
+  from{
+    visibility: hidden;
+    opacity: 0;
+  }
+  1%{
+    visibility: visible;
+    opacity: 0;
+  }
+  to{
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.fade_in{
+  animation: fade_in .4s ease-in-out forwards;
+}
+
+@keyframes fade_out{
+  from{
+    visibility: visible;
+    opacity: 1;
+  }
+  99%{
+    visibility: visible;
+    opacity: 0;
+  }
+  to{
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.fade_out{
+  animation: fade_out .4s ease-in-out forwards;
+}

@@ -1,0 +1,199 @@
+
+@mixin breakpoint-up($size) {
+    @media( min-width: map-get($breakpoints-up, $size)){
+        @content;
+    }    
+}
+
+@mixin breakpoint-down($size) {
+    @media( max-width: map-get($breakpoints-down, $size)){
+        @content;
+    }    
+}
+
+.hide-for-mobile{
+    @include breakpoint-down(small){
+        display: none;
+    }
+}
+
+.hide-for-mobile-tablette{
+    @include breakpoint-down(medium){
+        display: none;
+    }
+}
+
+.hide-for-tablette-desktop{
+    @include breakpoint-up(medium){
+        display: none;
+    }
+}
+
+.hide-for-desktop{
+    @include breakpoint-up(large){
+        display: none;
+    }
+}
+
+.side_section.show_side{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+html{
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-size: 100%;
+    overflow-x: hidden;
+}
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    font-family: $main-font;
+    font-weight: $regular;
+    font-size: $m;
+    color: black;
+    overflow-x: hidden;
+}
+
+a, a:visited, a:hover, a:focus{
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}
+
+ul, li{
+    list-style: none;
+    font-family: $logo-font;
+}
+
+.container{
+    max-width: 90%;
+    margin: 0 auto;
+    @include breakpoint-down(small){
+        max-width: 95%;
+    }
+
+    @include breakpoint-up(xlarge){
+        max-width: 85%;
+    }
+}
+
+h1{
+    font-size: $l;
+    color: white;
+}
+
+h2{
+    font-family: $logo-font;
+    font-size: $xl;
+    font-weight: $semi-bold;
+    text-align: center;
+    padding-bottom: .3rem;
+}
+
+hr{
+    height: .25rem;
+    border: none;
+    border-radius: 20px;
+    background-color: $red;
+    margin: 0 auto;
+    width: 25%;
+}
+
+button{
+    position: relative;
+    border: none;
+    border-radius: 15px;
+    padding: .875rem 1.625rem;
+    color: white;
+    background-color: $red;
+    font-weight: $semi-bold;
+    font-family: $main-font;
+    font-size: $s;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .25s ease-in-out;
+}
+
+.main_btn:before, .main_btn:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:3px;
+  width:0;
+  background: $red;
+}
+.main_btn:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+.main_btn:hover:before, .main_btn:hover:after{
+  width:100%;
+  transition: .5s ease-in-out;
+}
+
+.main_btn:hover{
+    background-color: transparent;
+    color: $red;
+}
+
+button:focus{outline: 0;}
+
+.btn, .btn:hover{
+    font-family: $logo-font;
+    font-size: $l;
+    font-weight: $regular;
+    text-transform: unset;
+    padding: 1rem 2rem;
+    background-color: white;
+    color: black;
+}
+
+input{
+    margin-bottom: 1.5rem;
+    border: none;
+    border-radius: 10px;
+    height: 2.5rem;
+    padding: 0 .6rem;
+    font-size: $m;
+}
+
+input:focus{outline: 0;}
+
+input:focus{
+    border: 2px solid $green;
+}
+
+.to_top{
+    position: fixed;
+    right: .4rem;
+    bottom: 1.5rem;
+    padding: 5px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(0);
+    transition: .2s ease-in-out;
+
+    img{
+        width: 100%;
+    }
+
+    &.active{
+        opacity: 1;
+        transform: scale(1);
+    }
+}

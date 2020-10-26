@@ -1,0 +1,683 @@
+// Header Section 
+header{
+    position: relative;
+    background-image: linear-gradient(to bottom right, $soft-blue, $soft-blue);
+    height: 100vh;
+
+    @include breakpoint-down(medium){
+        padding-bottom: 2.5rem;
+        height: 100%;
+    }
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 15vh;
+
+    @include breakpoint-down(medium){
+        height: 100%;
+        padding: 1.5rem 0;
+    }
+
+    &__logo{
+        font-weight: $bold;
+        font-family: $logo-font;
+        font-size: 2.25rem;
+        line-height: 2rem;
+
+        span{
+            color: $red;
+        }
+    }
+
+    &__items{
+        position: relative;
+        width: 50%;
+        ul{
+            display: flex;
+            justify-content: space-between;
+            
+            li{
+                position: relative;
+                padding: 10px;
+            }
+
+            li::after{
+                content: "";
+                position: absolute;
+                width: 50%;
+                height: 4px;
+                background-color: $red;
+                left: 10px;
+                bottom: 0;
+                border-radius: 50px;
+                transform: scale(0);
+                transition: .3s ease-in-out;
+    
+            }
+
+            a:hover li::after{
+                transform: scale(1);
+            }
+    
+        }
+
+        .dropdown{
+
+            &__items{
+                z-index: 1000;
+                position: absolute;
+                top: 40px;
+                width: 100%;
+                padding: 10px 0;
+                backdrop-filter: blur(20px);
+                border-radius: 10px;
+                box-shadow: 0px 10px 20px rgba(102, 102, 102, 0.4);
+                display: flex;
+                flex-wrap: wrap;
+                transform: scale(0);
+                opacity: 0;
+                transition: .3s ease-in-out;
+            }
+    
+            &__item{
+
+                a{
+                    display: flex;
+                    align-items: center;
+    
+                    img{
+                        margin: 10px 10px 10px 20px;
+                        width: 80px;
+                        border: 2px white solid;
+                        border-radius: 50%;
+                        transition: .3s ease-in-out;
+                    }
+                }
+
+                a:hover img{
+                    transform: scale(1.1);
+                }
+            }
+    
+            &:hover {
+                .dropdown__items {
+                    transform: scale(1);
+                    opacity: 1;
+                    
+                }
+            }
+        
+        }
+
+        
+    }
+
+    &__icons{
+        width: 150px;
+        ul{
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+
+            img{
+                width: 30px;
+            }
+
+            span{
+                font-family: $logo-font;
+                font-weight: $bold;
+                color: $red;
+                position: absolute;
+                top: -15px;
+                right: -5px;
+            }
+        }
+    }
+}
+
+.navbar{
+    position: relative;
+    width: 100%;
+    margin: 0;
+    
+    &__items {
+        background-color: black;
+
+        .container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+    }
+
+    &__dropdown{
+        position: absolute;
+        top: 4.6875rem;
+        right: 0;
+        left: 0;
+        visibility: hidden;
+        opacity: 0;
+        background-color: white;
+        text-align: center;
+        font-size: $l;           
+        li{
+            padding: 1.5rem;
+        }
+
+        li:hover{
+            background-color: $soft-blue;
+        }
+    }
+
+}
+
+.side_section{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50vw;
+    height: 100vh;
+    backdrop-filter: blur(60px);
+    box-shadow: -5px 0px 15px;
+    transform: translateX(55vw);
+    opacity: 0;
+    transition: .4s ease-in-out;
+
+    @include breakpoint-down(small){
+        width: 100vw;
+        transform: translate(105vw);
+    }
+
+    &_title{
+        background-color: white;
+        text-align: center;
+
+        h3{
+            padding: 3vh 0;
+        }
+
+        img{
+            margin-top: 1rem;
+            float: right;
+            width: 50px;
+            cursor: pointer;
+        }
+    }
+
+    .delivery{
+        &__details{
+            margin: 2.5rem 2rem;
+            background-color: white;
+            text-align: center;
+            border-radius: 10px;
+            padding: 1rem;
+        }
+
+        &__info{
+            margin: 0 auto;
+            padding: 1.5rem;
+            background-color: $gray-blue;
+            width: 60%;
+            border-radius: 10px;
+
+            form{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+.hero{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    height: 70vh;
+
+    @include breakpoint-down(medium){
+        height: 100%;
+        flex-direction: column;
+    }
+
+    &__title{
+        max-width: 510px;
+
+        @include breakpoint-down(medium){
+            text-align: center;
+        }
+
+        p{
+            font-size: $xl;
+            font-weight: $bold;
+            color: $dark-blue;
+            line-height: 3rem;
+            padding-bottom: 2rem;
+        }
+    }
+
+    &__img{
+        max-width: 1000px;
+        min-width: 350px;
+        flex-grow: 1;
+
+        img{
+            width: 100%;
+            filter: drop-shadow(-1px 10px 8px rgb(117, 117, 117));
+        }
+
+        &__mobile{
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+
+.bottom{
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 15vh;
+    
+    &__social{
+        z-index: 800;
+        display: flex;
+        width: 260px;
+
+        a{
+            img{
+                width: 2rem;
+                margin-right: 2rem;
+            }
+        }
+
+    }
+
+    &__more{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        text-align: center;
+        img{
+            width: 35px;
+        }
+    }
+
+}
+
+// !Header Section
+
+
+// Categories Section
+.grid{
+    margin: $margin 0;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(500px,1fr));
+
+    @include breakpoint-down(small){
+        grid-template-columns: repeat(auto-fit, minmax(300px,1fr));      
+    }
+
+
+    &__items{
+        max-height: 550px;
+    }
+    .T-Shirts{
+        overflow: hidden;
+        cursor: pointer;
+        position: relative;
+        background-color: $soft-blue;
+        
+        img{
+            height: 100%;
+            width: 100%;
+            transform: scale(1);
+            transition: .8s ease-in-out;
+        }
+        .btn{
+            position: absolute;
+            bottom: 5%;
+            left: 5%;
+        }
+        &::before{
+            content: "";
+            position: absolute;
+            width: 95%;
+            height: 95%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            border: 6px white solid;
+        }
+
+        &:hover img{
+            transform: scale(1.1);
+        }
+    }
+    
+    &__small{
+        display: grid;
+        gap: 2rem;
+        grid-template-rows: repeat(auto-fit, minmax(200px,1fr));
+
+        .Chaussures, .Montres{
+            cursor: pointer;
+            overflow: hidden;
+            position: relative;
+            background-color: $soft-blue;
+
+            img{
+                float: right;
+                transform: scale(1);
+                transition: .8s ease-in-out;
+                
+                @include breakpoint-down(small){
+                    width: 100%;
+                }
+            }
+
+            .btn{
+                position: absolute;
+                bottom: 10%;
+                left: 5%;
+            }
+        }
+
+        .Chaussures::before, .Montres::before{
+            content: "";
+            position: absolute;
+            width: 95%;
+            height: 90%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            border: 6px white solid;
+        }
+
+        .Chaussures:hover img, .Montres:hover img{
+            transform: scale(1.1);
+        }
+
+    }
+}
+
+// !Categories Section
+
+// New Arrivals
+
+.products{
+    margin: $margin auto;
+    .flex{
+        margin: 2rem 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 1rem;
+    }
+}
+
+.product{
+    width: 280px;
+    height: 480px;
+    &__image{
+
+        position: relative;
+        height: 80%;
+        border-radius: 15px;
+        cursor: pointer;
+        overflow: hidden;
+
+        .sold{
+            position: absolute;
+            height: 2rem;
+            width: 5rem;
+            top: 5%;
+            left: 0;
+            text-align: center;
+            background-color: $red;
+            border-radius: 0 20px 20px 0;
+            color: white;
+            z-index: 2000;
+            transition: .5s ease-in-out;
+        }
+
+        &:hover{
+
+            img{
+                transform: scale(1.1);
+            }
+            .sold{
+                transform: translateX(-5rem);
+            }
+        }
+
+        img{
+            width: 100%;
+            height: 100%;
+            transition: .5s ease-in-out;
+        }
+
+        button{
+            position: absolute;
+            bottom: 4%;
+            right: 6%;
+            border-radius: 50px;
+            font-weight: $regular;
+            font-size: $s;
+            color: black;
+            background-color: white;
+            padding: .6rem 1rem;
+        }
+    }
+
+    &__details{
+        padding: .8rem 0;
+        max-height: 20%;
+        display: flex;
+        justify-content: space-between;
+
+        .left{
+            max-width: 70%;
+
+            .sizes ul{
+                display: flex;
+                gap: .5rem;
+                text-align: center;
+                padding-top: .8rem;
+
+                li{
+                    position: relative; 
+                    width: 2rem; 
+                    font-size: $xs;
+                    font-weight: $bold;
+                                   
+                    &::before{
+                        content: "";
+                        z-index: -1;
+                        position: absolute;
+                        background-color: $soft-blue;
+                        padding: 100% 100% 0 0;
+                        border-radius: 50%;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%,-50%);
+                    }
+                }
+
+            }
+        }
+
+        .right{
+            font-weight: $bold;
+            font-size: $l;
+            line-height: 1.2;
+
+            .sold{
+                font-weight: $light;
+                color: rgb(100, 100, 100);
+                text-decoration: line-through;
+
+            }
+        }
+    }
+}
+
+// !New Arrivals
+
+// Promotion
+
+.promotion{
+
+background-color: $soft-blue;
+margin: $margin 0;
+
+&__text{
+    text-align: center;
+
+    h2{
+        font-family: $main_font;
+        line-height: 1.2;
+        padding-bottom: 2rem;
+
+        span{
+            color: $red;
+        }
+    }
+
+    .main_btn{
+        background-color: black;
+        color: white;
+    }
+    .main_btn:hover{
+        background-color: transparent;
+        color: black;
+    }
+    .main_btn::after, .main_btn::before{
+        background-color: black;
+    }
+
+}
+    
+@include breakpoint-up(large){
+    position: relative;
+    padding: 15vh 15% 15vh 30%;
+
+    &__img{
+        position: absolute;
+        top: -4.5rem;
+        left: 0;
+        width: 30%;
+        filter: drop-shadow(5px 5px 3px rgb(150, 150, 150));
+    }
+
+    &__icon{
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        width: 13%;
+    }
+}
+
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 2rem;
+
+&__img{
+    max-width: 100vw;
+}
+
+&__icon{
+    max-width: 40vw;
+    transform: translateY(-2rem);
+}
+
+}
+
+// !Promotion
+
+// Footer
+
+footer{
+    background-color: black;
+    height: 100%;
+
+    .footer{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 2rem;
+        height: 80%;
+
+        @include breakpoint-down(medium){
+            justify-content: space-around;
+        }
+
+        &__item{
+            padding: 2rem 0 1rem;
+            
+            max-width: 13.125rem;
+
+            &__logo{
+
+                font-weight: $bold;
+                font-family: $logo-font;
+                text-transform: uppercase;
+                font-size: 2.25rem;
+                line-height: 2rem;
+                padding-bottom: 2rem;
+        
+                span{
+                    color: $red;
+                }
+            }
+
+            &__adress, h3, a{
+                color: white;
+            }
+
+            h3{
+                font-weight: $regular;
+                padding-bottom: 1rem;
+                font-weight: $light;
+            }
+
+            img{
+                width: 42px;
+                margin-right: 1rem;
+            }
+
+        }
+    }
+
+    .bmraed{
+        color: white;
+        text-align: center;
+        font-weight: $light;
+        font-size: $xs;
+        padding: .5rem;
+    
+        
+        hr{
+            height: .1rem;
+            margin: .5rem auto;
+            background-color: white;
+            width: 70%;
+        }
+
+        a{
+            color: white;
+            font-family: $raed_font;
+            font-size: $m;
+        }
+    }
+}
+
+// !Footer
