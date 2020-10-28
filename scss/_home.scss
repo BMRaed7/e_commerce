@@ -1,26 +1,18 @@
 // Header Section 
 header{
-    position: relative;
-    background-image: linear-gradient(to bottom right, $soft-blue, $soft-blue);
-    height: 100vh;
-
-    @include breakpoint-down(medium){
-        padding-bottom: 2.5rem;
-        height: 100%;
-    }
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    padding: 2vh 0;
+    background-color: transparent;
 }
 
 .nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 15vh;
-
-    @include breakpoint-down(medium){
-        height: 100%;
-        padding: 1.5rem 0;
-    }
-
+   
     &__logo{
         font-weight: $bold;
         font-family: $logo-font;
@@ -141,7 +133,7 @@ header{
 .navbar{
     position: relative;
     width: 100%;
-    margin: 0;
+    margin: 1rem 0;
     
     &__items {
         background-color: black;
@@ -175,78 +167,35 @@ header{
 
 }
 
-.side_section{
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 50vw;
-    height: 100vh;
-    backdrop-filter: blur(60px);
-    box-shadow: -5px 0px 15px;
-    transform: translateX(55vw);
-    opacity: 0;
-    transition: .4s ease-in-out;
-
-    @include breakpoint-down(small){
-        width: 100vw;
-        transform: translate(105vw);
-    }
-
-    &_title{
-        background-color: white;
-        text-align: center;
-
-        h3{
-            padding: 3vh 0;
-        }
-
-        img{
-            margin-top: 1rem;
-            float: right;
-            width: 50px;
-            cursor: pointer;
-        }
-    }
-
-    .delivery{
-        &__details{
-            margin: 2.5rem 2rem;
-            background-color: white;
-            text-align: center;
-            border-radius: 10px;
-            padding: 1rem;
-        }
-
-        &__info{
-            margin: 0 auto;
-            padding: 1.5rem;
-            background-color: $gray-blue;
-            width: 60%;
-            border-radius: 10px;
-
-            form{
-                display: flex;
-                flex-direction: column;
-            }
-        }
-    }
-}
-
 .hero{
+    height: 100vh;
+    background-color: $soft-blue;
+    padding-top: $padding_top;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2rem;
-    height: 70vh;
+    flex-direction: column;
+    justify-content: space-around;
 
     @include breakpoint-down(medium){
+        padding-top: 10.7rem;
+        padding-bottom: 4rem;
         height: 100%;
-        flex-direction: column;
+    }
+
+    .container{
+        height: 90vh;
+        display: flex;
+        align-items: center;
+        gap: 5rem;
+
+        @include breakpoint-down(medium){
+            height: 100%;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
     }
 
     &__title{
-        max-width: 510px;
-
         @include breakpoint-down(medium){
             text-align: center;
         }
@@ -261,54 +210,54 @@ header{
     }
 
     &__img{
-        max-width: 1000px;
-        min-width: 350px;
+        min-width: 600px;
         flex-grow: 1;
 
         img{
             width: 100%;
-            filter: drop-shadow(-1px 10px 8px rgb(117, 117, 117));
+            filter: drop-shadow(-5px 5px 5px rgba( black, .3) );
         }
 
         &__mobile{
+            width: 100%;
             img{
                 width: 100%;
             }
         }
     }
-}
 
-.bottom{
-    position: relative;
-    display: flex;
-    align-items: center;
-    height: 15vh;
-    
-    &__social{
-        z-index: 800;
+    .bottom{
+        height: 10vh;
+        position: relative;
         display: flex;
-        width: 260px;
+        align-items: center;
 
-        a{
+        &__social{
+            z-index: 800;
+            display: flex;
+            width: 260px;
+    
+            a{
+                img{
+                    width: 2rem;
+                    margin-right: 2rem;
+                }
+            }
+    
+        }
+    
+        &__more{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            text-align: center;
             img{
-                width: 2rem;
-                margin-right: 2rem;
+                width: 35px;
             }
         }
-
+    
     }
-
-    &__more{
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 100%;
-        text-align: center;
-        img{
-            width: 35px;
-        }
-    }
-
 }
 
 // !Header Section
@@ -355,10 +304,17 @@ header{
             left: 50%;
             transform: translate(-50%,-50%);
             border: 6px white solid;
+            transition: .8s ease-in-out;
         }
 
-        &:hover img{
-            transform: scale(1.1);
+        &:hover{
+            &::before{
+                width: 90%;
+                height: 90%;
+            }
+            img{
+                transform: scale(1.1);
+            }
         }
     }
     
@@ -399,12 +355,21 @@ header{
             left: 50%;
             transform: translate(-50%,-50%);
             border: 6px white solid;
+            transition: .8s ease-in-out;
         }
 
-        .Chaussures:hover img, .Montres:hover img{
-            transform: scale(1.1);
-        }
+        .Chaussures:hover, .Montres:hover{
 
+            &::before{
+                width: 90%;
+                height: 85%;
+            }
+
+            img{
+                transform: scale(1.1);
+            }
+
+        }
     }
 }
 
@@ -418,8 +383,12 @@ header{
         margin: 2rem 0;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: space-between;
         gap: 1rem;
+
+        @include breakpoint-down(medium){
+            justify-content: space-around;
+        }
     }
 }
 
@@ -538,6 +507,10 @@ header{
 background-color: $soft-blue;
 margin: $margin 0;
 
+@include breakpoint-down(medium){
+    max-height: 100vh;
+}
+
 &__text{
     text-align: center;
 
@@ -548,6 +521,10 @@ margin: $margin 0;
 
         span{
             color: $red;
+        }
+
+        @include breakpoint-down(small){
+            font-size: $l;
         }
     }
 

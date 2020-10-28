@@ -71,8 +71,10 @@
                 <a href="#"><li>Promotions</li></a>
             </div>
         </div>
+    </header>
 
-        <section class="hero container">
+    <section class="hero">
+        <div class="container">
             <div class="hero__img__mobile hide-for-desktop">
                 <img src="../img/hero.png" alt="clothes">
             </div>
@@ -89,20 +91,20 @@
             <div class="hero__img hide-for-mobile-tablette">
                 <img src="../img/hero.png" alt="clothes">
             </div>
-        </section>
+        </div>
 
         <div class="hide-for-mobile-tablette">
-        <div class="bottom container">
-            <div class="bottom__more">
-                <a href="#categories"><img src="../img/icons/more-than-100.png" alt="more" class="shake-vertical"></a>
+            <div class="bottom container">
+                <div class="bottom__more">
+                    <a href="#categories"><img src="../img/icons/more-than-100.png" alt="more" class="shake-vertical"></a>
+                </div>
+                <div class="bottom__social">
+                    <a href="#"><img src="../img/icons/facebook.png" alt="facebook"></a>
+                    <a href="#"><img src="../img/icons/instagram.png" alt="instagram"></a>
+                </div>
             </div>
-            <div class="bottom__social">
-                <a href="#"><img src="../img/icons/facebook.png" alt="facebook"></a>
-                <a href="#"><img src="../img/icons/instagram.png" alt="instagram"></a>
-            </div>
-        </div>
         </div> 
-    </header>
+    </section>
 
     <section class="container" id="categories">
         <div class="grid" >
@@ -580,7 +582,7 @@
     <div class="side_section delivery">
         <div class="side_section_title">
             <img src="../img/icons/right-100.png" id="right_btn1">
-            <h3>Delivery</h3>
+            <h2>Delivery</h2>
         </div>
         <div class="delivery__details">
             <p>Pour suivre votre commande, veuillez entrer votre ID de commande 
@@ -601,14 +603,76 @@
     <div class="side_section search">
         <div class="side_section_title">
             <img src="../img/icons/right-100.png" id="right_btn2">
-            <h3>Search</h3>
+            <h2>Search</h2>
         </div>
+        <form action="" class="search_section">
+            <input type="text" id="search">
+            <button class="main_btn">CHERCHER</button>
+        </form>
     </div>
 
     <div class="side_section bag">
         <div class="side_section_title">
             <img src="../img/icons/right-100.png" id="right_btn3">
-            <h3>Shopping Bag</h3>
+            <h2>Shopping Bag</h2>
+        </div>
+        <div class="bag_info">
+            <div class="bag_info_products">
+                <div class="bag_product">
+                    <div class="bag_product_img">
+                        <img src="../img/product3.png" alt="">
+                    </div>
+                    <div class="bag_product_info">
+                        <h3>Nom De Produit</h3>
+                        <p>Taille: M</p>
+                        <div class="prix">
+                            <h3>100 DT</h3>
+                            <p>120 DT</p>
+                        </div>
+
+                    </div>
+                    <img src="../img/icons/trash.png" alt="" class="delete">
+                </div>
+                <div class="bag_product">
+                    <div class="bag_product_img">
+                        <img src="../img/product3.png" alt="">
+                    </div>
+                    <div class="bag_product_info">
+                        <h3>Nom De Produit</h3>
+                        <p>Taille: M</p>
+                        <div class="prix">
+                            <h3>100 DT</h3>
+                            <p>120 DT</p>
+                        </div>
+
+                    </div>
+                    <img src="../img/icons/trash.png" alt="" class="delete">
+                </div>
+            </div>
+            <div class="bag_info_recap">
+                <div class="title">
+                    <h2>Récapitulatif</h2>
+                    <hr>
+                </div>
+                <div class="details">
+                    <ul class="left">
+                        <li>Sous-total :</li>
+                        <li>Réduction :</li>
+                        <li>Frais de livraison :</li>
+                    </ul>
+                    <ul class="right">
+                        <li>220 DT</li>
+                        <li>- 40 DT</li>
+                        <li>5 DT</li>
+                    </ul>
+                </div>
+                <hr>
+                <div class="total">
+                    <h2>Total:</h2>
+                    <span>185 DT</span>
+                </div>
+                <button class="main_btn">VALIDER MON PANIER</button>
+            </div>
         </div>
     </div> 
 

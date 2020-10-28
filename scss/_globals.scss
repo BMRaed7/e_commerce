@@ -113,7 +113,7 @@ button{
     position: relative;
     border: none;
     border-radius: 15px;
-    padding: .875rem 1.625rem;
+    padding: .8rem 1.625rem;
     color: white;
     background-color: $red;
     font-weight: $semi-bold;
@@ -141,7 +141,7 @@ button{
 }
 .main_btn:hover:before, .main_btn:hover:after{
   width:100%;
-  transition: .5s ease-in-out;
+  transition: .5s linear;
 }
 
 .main_btn:hover{

@@ -58,9 +58,11 @@
         </nav>
 
         <div class="navbar hide-for-desktop">
-            <div class="navbar__items container">
-                <h1>MENU</h1>
-                <img src="../img/icons/Menu.png" alt="hamburger" id="hamburger">
+            <div class="navbar__items">
+                <div class="container">
+                    <h1>MENU</h1>
+                    <img src="../img/icons/Menu.png" alt="hamburger" id="hamburger">
+                </div>
             </div>
             <div class="navbar__dropdown">
                 <a href="#"><li>Vêtements</li></a>
