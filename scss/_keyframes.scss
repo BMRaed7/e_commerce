@@ -22,6 +22,7 @@
 	        animation: shake-vertical 4s 2s infinite ease-in-out;
 }
 
+// navbar animation 
 
 @keyframes fade_in{
   from{
@@ -59,4 +60,41 @@
 
 .fade_out{
   animation: fade_out .4s ease-in-out forwards;
+}
+
+//header animation
+
+@keyframes show_nav{
+  from{
+    padding: 2vh 0;
+    opacity: 0;
+    background-color: transparent;
+  }
+  60%{
+    padding: 2vh 0;
+    opacity: 1;
+  }
+  to{
+    padding: .5rem 0 .3rem;
+    background-color: $soft-blue;
+  }
+
+}
+
+.show_nav{
+  animation: show_nav .5s ease-in-out forwards;
+}
+
+@keyframes hide_nav{
+  from{
+    opacity: 1;
+  }
+
+  to{
+    opacity: 0;
+  }
+}
+
+.hide_nav{
+  animation: hide_nav .5s ease-in-out forwards;
 }

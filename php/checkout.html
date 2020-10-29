@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Seaweed+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../scss/style.css">
+    <title>e-commerce</title>
+</head>
+<body>
+    
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <a href="index.html">BIJOUJA<span>4</span><br>FASHION</a>
+            </div>
+            <div class="nav__items hide-for-mobile-tablette">
+                <ul>
+                    <div class="dropdown">
+                        <a href="#"><li>Vêtements</li></a>
+                        <div class="dropdown__items">
+                            <div class="dropdown__item">
+                                <a href="#"><img src="../img/product0.png" alt="">T-shirts</a>
+                            </div>
+                            <div class="dropdown__item">
+                                <a href="#"><img src="../img/product1.png" alt="">Chemises</a>
+                            </div>
+                            <div class="dropdown__item">
+                                <a href="#"><img src="../img/product2.png" alt="">Shorts</a>
+                            </div>
+                            <div class="dropdown__item">
+                                <a href="#"><img src="../img/product3.png" alt="">Pantalons</a>
+                            </div>
+                            <div class="dropdown__item">
+                                <a href="#"><img src="../img/product4.png" alt="">Blousons</a>
+                            </div>
+                            <div class="dropdown__item">
+                                <a href="#"><img src="../img/product5.png" alt="">Casquettes</a>
+                            </div>
+                            <div class="dropdown__item">
+                                <a href="#"><img src="../img/product6.png" alt="">Montres</a>
+                            </div>
+                        </div>
+                    </div>                        
+                    <a href="#"><li>Chaussures</li></a>
+                    <a href="#"><li>Promotions</li></a>
+                    <a href="#"><li>Contact</li></a>
+                </ul>
+            </div>
+            <div class="nav__icons">
+                <ul>
+                    <a href="#" onclick="show_search()"><img src="../img/icons/search-100.png" alt="search"></a>
+                    <a href="#" onclick="show_delivery()"><img src="../img/icons/delivery-100.png" alt="delivery"></a>
+                    <a href="#" onclick="show_bag()"><img src="../img/icons/shopping-bag-100.png" alt="bag"><span>2</span></a>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="navbar hide-for-desktop">
+            <div class="navbar__items">
+                <div class="container">
+                    <h1>MENU</h1>
+                    <img src="../img/icons/Menu.png" alt="hamburger" id="hamburger">
+                </div>
+            </div>
+            <div class="navbar__dropdown">
+                <a href="#"><li>Vêtements</li></a>
+                <a href="#"><li>Chaussures</li></a>
+                <a href="#"><li>Contact</li></a>
+                <a href="#"><li>Promotions</li></a>
+            </div>
+        </div>
+    </header>
+
+    <section class="check-out top_page">
+        <div class="top_page_title">
+            <h2>CHECK-OUT</h2>
+        </div>
+    </section>
+
+
+    <div class="side_section delivery">
+        <div class="side_section_title">
+            <img src="../img/icons/right-100.png" id="right_btn1">
+            <h2>Delivery</h2>
+        </div>
+        <div class="delivery__details">
+            <p>Pour suivre votre commande, veuillez entrer votre ID de commande 
+                Cela vous a été remis sur votre reçu et dans l'Email de confirmation que vous auriez dû recevoir.
+            </p>
+        </div>
+        <div class="delivery__info">
+            <form action="">
+                <label for="commande_id">Commande ID</label>
+                <input type="text" id="commande_id">
+                <label for="email_tel">Votre Email / Téléphone </label>
+                <input type="text" id="email_tel">
+                <button class="main_btn">SUIVRE VOTRE COMMANDE</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="side_section search">
+        <div class="side_section_title">
+            <img src="../img/icons/right-100.png" id="right_btn2">
+            <h2>Search</h2>
+        </div>
+        <form action="" class="search_section">
+            <input type="text" id="search">
+            <button class="main_btn">CHERCHER</button>
+        </form>
+    </div>
+
+    <div class="side_section bag">
+        <div class="side_section_title">
+            <img src="../img/icons/right-100.png" id="right_btn3">
+            <h2>Shopping Bag</h2>
+        </div>
+        <div class="bag_info">
+            <div class="bag_info_products">
+                <div class="bag_product">
+                    <div class="bag_product_img">
+                        <img src="../img/product3.png" alt="">
+                    </div>
+                    <div class="bag_product_info">
+                        <h3>Nom De Produit</h3>
+                        <p>Taille: M</p>
+                        <div class="prix">
+                            <h3>100 DT</h3>
+                            <p>120 DT</p>
+                        </div>
+
+                    </div>
+                    <img src="../img/icons/trash.png" alt="" class="delete">
+                </div>
+                <div class="bag_product">
+                    <div class="bag_product_img">
+                        <img src="../img/product3.png" alt="">
+                    </div>
+                    <div class="bag_product_info">
+                        <h3>Nom De Produit</h3>
+                        <p>Taille: M</p>
+                        <div class="prix">
+                            <h3>100 DT</h3>
+                            <p>120 DT</p>
+                        </div>
+
+                    </div>
+                    <img src="../img/icons/trash.png" alt="" class="delete">
+                </div>
+            </div>
+            <div class="bag_info_recap">
+                <div class="title">
+                    <h2>Récapitulatif</h2>
+                    <hr>
+                </div>
+                <div class="details">
+                    <ul class="left">
+                        <li>Sous-total :</li>
+                        <li>Réduction :</li>
+                        <li>Frais de livraison :</li>
+                    </ul>
+                    <ul class="right">
+                        <li>220 DT</li>
+                        <li>- 40 DT</li>
+                        <li>5 DT</li>
+                    </ul>
+                </div>
+                <hr>
+                <div class="total">
+                    <h2>Total:</h2>
+                    <span>185 DT</span>
+                </div>
+                <button class="main_btn">VALIDER MON PANIER</button>
+            </div>
+        </div>
+    </div> 
+
+    <footer>
+        <div class="container footer">
+            <div class="footer__item">
+                <div class="footer__item__logo">
+                    <a href="">BIJOUJA<span>4</span><br>FASHION</a>
+                </div>
+                <div class="footer__item__adress">
+                    Rue El Houda Sahloul <br>Sousse, Tunisie 
+                </div>
+            </div>
+            <div class="footer__item">
+                <a href="#"><h3>Nous Contacter</h3></a>
+                <a href="#"><h3>Suivre Votre Commande</h3></a>
+                <a href="#"><h3>À Propos</h3></a>
+            </div>
+            <div class="footer__item">
+                <h3>SUIVEZ-NOUS SUR:</h3>
+                <a href="#"><img src="../img/icons/facebook-white.png" alt=""></a>
+                <a href="#"><img src="../img/icons/instagram-white.png" alt=""></a>
+            </div>
+        </div>
+        <div class="bmraed container">
+            <hr>
+            &copy;2020 All Rights Reserved. This Website Is Made By <a href="mailto:bmraed7@gmail.com">Raed Ben Maghzouz</a>
+        </div>
+    </footer>
+
+    <a href="#" class="to_top" title="Back To Top"><img src="../img/icons/scroll.png" alt=""></a>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

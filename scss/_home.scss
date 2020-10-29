@@ -1,11 +1,20 @@
 // Header Section 
-header{
+.header{
     position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
     padding: 2vh 0;
     background-color: transparent;
+}
+
+.header.fixed{
+    z-index: 5000;
+    padding: .5rem 0;
+    position: fixed;
+    top: 0;
+    box-shadow: 0px 5px 10px rgba($color: #000000, $alpha: .4);
+    background-color: $soft-blue;
 }
 
 .nav{
@@ -57,16 +66,15 @@ header{
         }
 
         .dropdown{
-
             &__items{
                 z-index: 1000;
                 position: absolute;
                 top: 40px;
                 width: 100%;
                 padding: 10px 0;
-                backdrop-filter: blur(20px);
+                backdrop-filter: blur(60px);
                 border-radius: 10px;
-                box-shadow: 0px 10px 20px rgba(102, 102, 102, 0.4);
+                box-shadow: 0px 10px 20px rgba($color: #000000, $alpha: .3);
                 display: flex;
                 flex-wrap: wrap;
                 transform: scale(0);
@@ -83,7 +91,7 @@ header{
                     img{
                         margin: 10px 10px 10px 20px;
                         width: 80px;
-                        border: 2px white solid;
+                        border: 3px $gray-blue solid;
                         border-radius: 50%;
                         transition: .3s ease-in-out;
                     }
@@ -115,7 +123,7 @@ header{
             position: relative;
 
             img{
-                width: 30px;
+                width: 1.5rem;
             }
 
             span{
@@ -239,7 +247,7 @@ header{
     
             a{
                 img{
-                    width: 2rem;
+                    width: 1.5rem;
                     margin-right: 2rem;
                 }
             }
@@ -585,12 +593,12 @@ gap: 2rem;
 footer{
     background-color: black;
     height: 100%;
+    margin-top: $padding_top;
 
     .footer{
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        gap: 2rem;
         height: 80%;
 
         @include breakpoint-down(medium){
@@ -599,8 +607,7 @@ footer{
 
         &__item{
             padding: 2rem 0 1rem;
-            
-            max-width: 13.125rem;
+            width: 12rem;
 
             &__logo{
 
@@ -620,14 +627,14 @@ footer{
                 color: white;
             }
 
-            h3{
+            &__adress, h3{
                 font-weight: $regular;
                 padding-bottom: 1rem;
-                font-weight: $light;
+                font-size: $s;
             }
 
             img{
-                width: 42px;
+                width: 2rem;
                 margin-right: 1rem;
             }
 
@@ -639,14 +646,13 @@ footer{
         text-align: center;
         font-weight: $light;
         font-size: $xs;
-        padding: .5rem;
-    
+        padding-bottom: .5rem;    
         
         hr{
             height: .1rem;
-            margin: .5rem auto;
             background-color: white;
-            width: 70%;
+            width: 80%;
+            margin-bottom: .5rem;
         }
 
         a{

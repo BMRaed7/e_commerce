@@ -32,12 +32,10 @@ window.addEventListener('scroll', function(){
 });
 
 // Side Section
-const Search = document.querySelector('.search');
 const Delivery = document.querySelector('.delivery');
 const Bag = document.querySelector('.bag');
 const Right1 = document.querySelector('#right_btn1');
 const Right2 = document.querySelector('#right_btn2');
-const Right3 = document.querySelector('#right_btn3');
 
 function show_delivery(){
     Delivery.classList.add('show_side');
@@ -47,18 +45,54 @@ function show_delivery(){
     });  
 }
 
-function show_search(){
-    Search.classList.add('show_side');
-
-    Right2.addEventListener('click', function(){
-        Search.classList.remove('show_side');
-    });  
-}
-
 function show_bag(){
     Bag.classList.add('show_side');
 
-    Right3.addEventListener('click', function(){
+    Right2.addEventListener('click', function(){
         Bag.classList.remove('show_side');
     });  
 }
+
+//fixed header
+
+const Header = document.querySelector('.header');
+const Dropdown_items = document.querySelector('.dropdown__items');
+
+window.addEventListener('scroll', function(){
+
+    // show header 
+    if(window.pageYOffset > window.innerHeight ){
+        Header.classList.add('fixed');
+        Header.classList.remove('hide_nav');
+        Header.classList.add('show_nav');
+        Dropdown_items.style.backgroundColor = "white";
+
+    }
+
+    // hide header
+    else if((window.pageYOffset < window.innerHeight) && (window.pageYOffset > 300)){
+        Header.classList.remove('show_nav');
+        Header.classList.add('hide_nav');
+    }
+    else{
+        Header.classList.remove('fixed');
+        Header.classList.remove('hide_nav');
+        Header.classList.remove('show_nav');
+        Dropdown_items.style.backgroundColor = "transparent";
+    }
+});
+
+
+// quantite counter
+
+let Count = document.querySelector('.text__input');
+const Plus = document.querySelector('#plus');
+const Minus= document.querySelector('#minus');
+
+Plus.addEventListener('click', function(){
+    Count.value = parseInt(Count.value) + 1;
+});
+
+Minus.addEventListener('click', function(){
+    Count.value = parseInt(Count.value) - 1;
+});

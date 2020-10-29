@@ -3,7 +3,7 @@
     position: absolute;
     right: 0;
     top: 0;
-    width: 50vw;
+    width: 55vw;
     height: 100vh;
     padding-bottom: 4rem;
     backdrop-filter: blur(60px);
@@ -65,24 +65,13 @@
         }
     }
 
-    .search_section{
-        width: 90%;
-        margin: 3rem auto;
-        padding: 2rem;
-        border-radius: 10px;
-        display: flex;
-        flex-direction: column;
-        background-color: $gray-blue;
-    }
-
-
     .bag{
 
         &_info{
             display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
             justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
             padding: 2rem 0;
             margin: 0 auto;
 
@@ -93,10 +82,10 @@
 
                 .bag_product{
                     position: relative;
-                    width: 320px;
+                    width: 330px;
                     display: flex;
                     align-items: center;
-                    justify-content: space-between;
+                    gap: 1rem;
                     background-color: #F1F5FA;
                     border-radius: 20px;
                     padding: .8rem;
@@ -114,9 +103,9 @@
                     }
 
                     &_info{
-
                         h3{
                             font-size: $m;
+                            line-height: .8;
                         }
 
                         p{
@@ -127,6 +116,7 @@
                             display: flex;
                             gap: .5rem;
                             align-items: center;
+                            padding: .5rem 0;
 
                             p{
                                 text-decoration: line-through;
@@ -136,10 +126,11 @@
 
                     .delete{
                         position: absolute;
-                        right: .5rem;
-                        bottom: .5rem;
+                        left: -.2rem;
+                        top: -.5rem;
                         width: 25px;
                         height: 25px;
+                        transform: rotate(45deg);
                         cursor: pointer;
                     }
                 }
@@ -148,7 +139,7 @@
             &_recap{
                 background-color: $gray-blue;
                 height: 80vh;
-                width: 320px;
+                width: 330px;
                 border-radius: 10px;
                 display: flex;
                 padding: 1.2rem 0 2rem;
@@ -200,3 +191,5 @@
         }
     }
 }
+
+
