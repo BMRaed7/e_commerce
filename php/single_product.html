@@ -80,14 +80,16 @@
     </section>
 
     <section class="single_product">
-        <div class="single_product_images">
-            <img src="../img/product.jpg" alt="">
-            <img src="../img/product.jpg" alt="">
-            <img src="../img/product.jpg" alt="">
-            <img src="../img/product.jpg" alt="">
-        </div>
-        <div class="single_product_image">
-            <img src="../img/product.jpg" alt="">
+        <div class="single_product_img">
+            <div class="single_product_img_small">
+                <img id="img_1" src="../img/product.jpg" class="single_img" onclick="select_img(this.id);">
+                <img id="img_2" src="../img/product1.png" class="single_img live" onclick="select_img(this.id);">
+                <img id="img_3" src="../img/product2.png" class="single_img" onclick="select_img(this.id);">
+                <img id="img_4" src="../img/product3.png" class="single_img" onclick="select_img(this.id);">
+            </div>
+            <div class="single_product_img_big">
+                <img src="../img/product1.png" id="activated">
+            </div>
         </div>
         <div class="single_product_details">
             <h3>Nom Du Produit</h3>
@@ -261,7 +263,7 @@
     <div class="side_section delivery">
         <div class="side_section_title">
             <img src="../img/icons/right-100.png" id="right_btn1">
-            <h3>Delivery</h3>
+            <h2>Delivery</h2>
         </div>
         <div class="delivery__details">
             <p>Pour suivre votre commande, veuillez entrer votre ID de commande 
@@ -279,17 +281,76 @@
         </div>
     </div>
 
-    <div class="side_section search">
-        <div class="side_section_title">
-            <img src="../img/icons/right-100.png" id="right_btn2">
-            <h3>Search</h3>
-        </div>
-    </div>
-
     <div class="side_section bag">
         <div class="side_section_title">
-            <img src="../img/icons/right-100.png" id="right_btn3">
-            <h3>Shopping Bag</h3>
+            <img src="../img/icons/right-100.png" id="right_btn2">
+            <h2>Shopping Bag</h2>
+        </div>
+        <div class="bag_info">
+            <div class="bag_info_products">
+                <div class="bag_product">
+                    <div class="bag_product_img">
+                        <img src="../img/product3.png" alt="">
+                    </div>
+                    <div class="bag_product_info">
+                        <h3>Nom De Produit</h3>
+                        <p>Taille: M</p>
+                        <div class="prix">
+                            <h3>100 DT</h3>
+                            <p>120 DT</p>
+                        </div>
+                        <div class="quantite">
+                            <img src="../img/icons/minus.png" id="minus">
+                            <input class="text__input" type="text" id="count" name="count" value="1">
+                            <img src="../img/icons/plus.png" id="plus">
+                        </div>
+                    </div>
+                    <img src="../img/icons/trash.png" alt="" class="delete">
+                </div>
+                <div class="bag_product">
+                    <div class="bag_product_img">
+                        <img src="../img/product3.png" alt="">
+                    </div>
+                    <div class="bag_product_info">
+                        <h3>Nom De Produit</h3>
+                        <p>Taille: M</p>
+                        <div class="prix">
+                            <h3>100 DT</h3>
+                            <p>120 DT</p>
+                        </div>
+                        <div class="quantite">
+                            <img src="../img/icons/minus.png" id="minus">
+                            <input class="text__input" type="text" id="count" name="count" value="1">
+                            <img src="../img/icons/plus.png" id="plus">
+                        </div>
+                    </div>
+                    <img src="../img/icons/trash.png" alt="" class="delete">
+                </div>
+            </div>
+            <div class="recap">
+                <div class="title">
+                    <h2>Récapitulatif</h2>
+                    <hr>
+                </div>
+                <div class="details">
+                    <ul class="left">
+                        <li>Sous-total :</li>
+                        <li>Réduction :</li>
+                        <li>Frais de livraison :</li>
+                    </ul>
+                    <ul class="right">
+                        <li>220 DT</li>
+                        <li>- 40 DT</li>
+                        <li>5 DT</li>
+                    </ul>
+                </div>
+                <hr>
+                <div class="total">
+                    <h2>Total:</h2>
+                    <span>185 DT</span>
+                </div>
+                <button class="main_btn">VALIDER MON PANIER</button>
+            </div>
         </div>
     </div> 
 

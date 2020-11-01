@@ -10,7 +10,7 @@
 </head>
 <body>
     
-    <header>
+    <header class="header">
         <nav class="nav container">
             <div class="nav__logo">
                 <a href="index.html">BIJOUJA<span>4</span><br>FASHION</a>

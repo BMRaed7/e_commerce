@@ -19,20 +19,9 @@
         </div>
     </div>
 
-    <div class="side_section search">
-        <div class="side_section_title">
-            <img src="../img/icons/right-100.png" id="right_btn2">
-            <h2>Search</h2>
-        </div>
-        <form action="" class="search_section">
-            <input type="text" id="search">
-            <button class="main_btn">CHERCHER</button>
-        </form>
-    </div>
-
     <div class="side_section bag">
         <div class="side_section_title">
-            <img src="../img/icons/right-100.png" id="right_btn3">
+            <img src="../img/icons/right-100.png" id="right_btn2">
             <h2>Shopping Bag</h2>
         </div>
         <div class="bag_info">
@@ -48,7 +37,11 @@
                             <h3>100 DT</h3>
                             <p>120 DT</p>
                         </div>
-
+                        <div class="quantite">
+                            <img src="../img/icons/minus.png" id="minus">
+                            <input class="text__input" type="text" id="count" name="count" value="1">
+                            <img src="../img/icons/plus.png" id="plus">
+                        </div>
                     </div>
                     <img src="../img/icons/trash.png" alt="" class="delete">
                 </div>
@@ -63,12 +56,16 @@
                             <h3>100 DT</h3>
                             <p>120 DT</p>
                         </div>
-
+                        <div class="quantite">
+                            <img src="../img/icons/minus.png" id="minus">
+                            <input class="text__input" type="text" id="count" name="count" value="1">
+                            <img src="../img/icons/plus.png" id="plus">
+                        </div>
                     </div>
                     <img src="../img/icons/trash.png" alt="" class="delete">
                 </div>
             </div>
-            <div class="bag_info_recap">
+            <div class="recap">
                 <div class="title">
                     <h2>Récapitulatif</h2>
                     <hr>

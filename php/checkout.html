@@ -79,6 +79,87 @@
         </div>
     </section>
 
+    <section class="checkout_info container">
+        <form action="">
+            <h3>DÉTAILS DE LA FACTURATION</h3>
+            <label for="nom">Nom</label>
+            <input type="text" id="nom">
+
+            <label for="tel">Téléphone</label>
+            <input type="text" id="tel">
+
+            <br><br>
+
+            <label for="ville">Ville</label>
+            <input type="text" id="ville">
+            <label for="postcode">Postcode</label>
+            <input type="text" id="postcode">
+
+            <label for="adresse">Adresse</label>
+            <input type="text" id="adresse">
+
+            <br><br>
+
+            <label for="nom">Email <span>- Optional</span></label>
+            <input type="text" id="nom">
+
+            <label for="tel">Note <span>- Optional</span></label>
+            <input type="text" id="tel">
+
+        </form>
+        <div class="recap">
+            <div class="title">
+                <h2>Récapitulatif</h2>
+            </div>
+            <hr>
+            <div class="bag_info_products">
+                <div class="bag_product">
+                    <div class="bag_product_img">
+                        <img src="../img/product3.png" alt="">
+                    </div>
+                    <div class="bag_product_info">
+                        <h3>Nom De Produit</h3>
+                        <p>Taille: M</p>
+                        <div class="prix">
+                            <h3>100 DT</h3>
+                            <p>120 DT</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bag_product">
+                    <div class="bag_product_img">
+                        <img src="../img/product3.png" alt="">
+                    </div>
+                    <div class="bag_product_info">
+                        <h3>Nom De Produit</h3>
+                        <p>Taille: M</p>
+                        <div class="prix">
+                            <h3>100 DT</h3>
+                            <p>120 DT</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="details">
+                <ul class="left">
+                    <li>Sous-total :</li>
+                    <li>Réduction :</li>
+                    <li>Frais de livraison :</li>
+                </ul>
+                <ul class="right">
+                    <li>220 DT</li>
+                    <li>- 40 DT</li>
+                    <li>5 DT</li>
+                </ul>
+            </div>
+            <hr>
+            <div class="total">
+                <h2>Total:</h2>
+                <span>185 DT</span>
+            </div>
+            <button class="main_btn">VALIDER MON PANIER</button>
+        </div>
+    </section>
 
     <div class="side_section delivery">
         <div class="side_section_title">
@@ -101,20 +182,9 @@
         </div>
     </div>
 
-    <div class="side_section search">
-        <div class="side_section_title">
-            <img src="../img/icons/right-100.png" id="right_btn2">
-            <h2>Search</h2>
-        </div>
-        <form action="" class="search_section">
-            <input type="text" id="search">
-            <button class="main_btn">CHERCHER</button>
-        </form>
-    </div>
-
     <div class="side_section bag">
         <div class="side_section_title">
-            <img src="../img/icons/right-100.png" id="right_btn3">
+            <img src="../img/icons/right-100.png" id="right_btn2">
             <h2>Shopping Bag</h2>
         </div>
         <div class="bag_info">
@@ -130,7 +200,11 @@
                             <h3>100 DT</h3>
                             <p>120 DT</p>
                         </div>
-
+                        <div class="quantite">
+                            <img src="../img/icons/minus.png" id="minus">
+                            <input class="text__input" type="text" id="count" name="count" value="1">
+                            <img src="../img/icons/plus.png" id="plus">
+                        </div>
                     </div>
                     <img src="../img/icons/trash.png" alt="" class="delete">
                 </div>
@@ -145,12 +219,16 @@
                             <h3>100 DT</h3>
                             <p>120 DT</p>
                         </div>
-
+                        <div class="quantite">
+                            <img src="../img/icons/minus.png" id="minus">
+                            <input class="text__input" type="text" id="count" name="count" value="1">
+                            <img src="../img/icons/plus.png" id="plus">
+                        </div>
                     </div>
                     <img src="../img/icons/trash.png" alt="" class="delete">
                 </div>
             </div>
-            <div class="bag_info_recap">
+            <div class="recap">
                 <div class="title">
                     <h2>Récapitulatif</h2>
                     <hr>

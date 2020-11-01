@@ -1,3 +1,42 @@
 .top_page.check-out{
     background-image: url(../img/top_page1.jpg);
 }
+
+.checkout_info{
+    display: flex;
+    justify-content: space-between;
+
+    h3{
+        text-align: center;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        border-radius: 15px;
+        padding: 1rem 2rem;
+        background-color: $gray-blue;
+        width: 50%;
+    }
+
+    .recap{
+        width: 40%;
+        height: 100%;
+
+        hr{
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+
+        .bag_info_products{
+            width: 100%;
+            gap: 0;
+            .bag_product{
+                margin: 0 auto 1rem;
+                border-radius: 0;
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    }
+}

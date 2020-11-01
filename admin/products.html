@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Admin</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="" class="nav_item active">
+                <img src="img/product_list.png" alt="">
+                <h2>Liste Des Produits</h2>
+            </a>
+            <a href="" class="nav_item">
+                <img src="img/order.png" alt="">
+                <h2>Liste Des Commandes</h2>
+            </a>
+            <a href="" class="nav_item">
+                <img src="img/admin_profil.png" alt="">
+                <h2>Admin Profil</h2>
+            </a>
+        </nav>     
+    </header>
+
+    <section class="add_product">
+        <h1>Ajouter Un Produit</h1>
+
+        <hr>
+    </section>
+
+    <section class="product_list">
+        <h1>Liste Des Produits</h1>
+        <div class="pages">
+            <input type="radio" name="page" id="chaussures">
+            <label for="chaussures">Chaussures</label>
+
+            <input type="radio" name="page" id="t-shirts">
+            <label for="t-shirts">T-shirts</label>
+
+            <input type="radio" name="page" id="chemises">
+            <label for="chemises">Chemises</label>
+
+            <input type="radio" name="page" id="pantalons">
+            <label for="pantalons">Pantalons</label>
+
+            <input type="radio" name="page" id="blousons">
+            <label for="blousons">Blousons</label>
+
+            <input type="radio" name="page" id="shorts">
+            <label for="shorts">Shorts</label>
+
+            <input type="radio" name="page" id="casquettes">
+            <label for="casquettes">Casquettes</label>
+
+            <input type="radio" name="page" id="montres">
+            <label for="montres">Montres</label>
+
+            <input type="radio" name="page" id="promotion">
+            <label for="promotion">Promotion</label>
+        </div>
+        <span class="nombre_produit">17 produits</span>
+        <table class="products_table">
+            <tr>
+                <th>N°</th>
+                <th>Nom</th>
+                <th>Image</th>
+                <th>Tailles</th>
+                <th>Prix <span>(DT)</span></th>
+                <th>Sold <span>(DT)</span></th>
+                <th>Description</th>
+                <th>Ajouter Le</th>
+                <th>Supprimer</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>nom de produit</td>
+                <td class="product_img"><img src="img/product.jpg" alt=""></td>
+                <td>
+                    <ul>
+                        <li>XL</li>
+                        <li>L</li>
+                        <li>M</li>
+                        <li>S</li>
+                        <li>XS</li>
+                    </ul>
+                </td>
+                <td>120</td>
+                <td>100</td>
+                <td>bla bla bla </td>
+                <td>25 / 03 / 2021</td>
+                <td><img src="img/trash.png" id="product_delete"></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>nom de produit</td>
+                <td class="product_img"><img src="img/product3.png" alt=""></td>
+                <td>
+                    <ul>
+                        <li>38</li>
+                        <li>39</li>
+                        <li>40</li>
+                        <li>41</li>
+                        <li>42</li>
+                        <li>43</li>
+                    </ul>
+                </td>
+                <td>120</td>
+                <td>100</td>
+                <td>bla bla bla </td>
+                <td>25 / 03 / 2021</td>
+                <td><img src="img/trash.png" id="product_delete"></td>
+            </tr>
+        </table>
+    </section>
+
+</body>
+</html>

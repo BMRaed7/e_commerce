@@ -70,7 +70,7 @@ window.addEventListener('scroll', function(){
     }
 
     // hide header
-    else if((window.pageYOffset < window.innerHeight) && (window.pageYOffset > 300)){
+    else if((window.pageYOffset < window.innerHeight) && (window.pageYOffset > 500)){
         Header.classList.remove('show_nav');
         Header.classList.add('hide_nav');
     }
@@ -96,3 +96,25 @@ Plus.addEventListener('click', function(){
 Minus.addEventListener('click', function(){
     Count.value = parseInt(Count.value) - 1;
 });
+
+// Single Product Page Slider 
+let Single_img = document.querySelectorAll('.single_img')
+let Live = document.querySelector('.live');
+let Activated = document.getElementById('activated');
+
+function select_img(e){
+    
+        for( var j=0; j < Single_img.length ; j++){
+            if (Single_img[j].classList.contains('live')){
+                Single_img[j].classList.remove('live');
+            }
+        }
+
+        for( var j=0; j < Single_img.length ; j++){
+            if (Single_img[j].id == e){
+                Single_img[j].classList.add('live');
+                Activated.src = Single_img[j].src;
+            }
+        }
+        
+}
